@@ -19,15 +19,48 @@ public class Exercises {
 	public ArrayList<String> endsMeet(ArrayList<String> values, int n) {
 		// write your code here
 		
+		if(values == null || n > values.size() || n < -1){
+			return new ArrayList<String>();
+		}
+
+		ArrayList<String> result =  new ArrayList<String>();
+
+		for(int i = 0; i < n; i++){
+			result.add(values.get(i));
+		}
+
+		for(int i = values.size() - n; i < values.size(); i++){
+			result.add(values.get(i));
+		}
+
 		
 
-		return null;	// default return value to ensure compilation
+		return result;	// default return value to ensure compilation
 	}
 	
 	public int difference(ArrayList<Integer> numbers) {
 		// write your code here
+
+		if(numbers == null || numbers.size() < 1){
+			return -1;
+		}
+
+		int bigger = numbers.get(0);
+		int smaller = numbers.get(0);
 		
-		return -1;		// default return value to ensure compilation
+
+		for(int i = 0; i < numbers.size(); i++){
+			if(numbers.get(i) > bigger){
+				bigger = numbers.get(i);
+			}
+			if(numbers.get(i) < smaller){
+				smaller = numbers.get(i);
+			}
+		}
+		
+
+	
+		return bigger - smaller;		// default return value to ensure compilation
 	}
 	
 	public double biggest(ArrayList<Double> numbers) {
@@ -73,17 +106,7 @@ public class Exercises {
 	}
 
 	public static void main(String[] args){ 
-		ArrayList<String> cars = new ArrayList<String>();
-		cars.add("Volvo");
-		cars.add("BMW");
-		cars.add("Ford");
-		cars.add("Mazda");
-		System.out.println(cars);
-		System.out.println(cars.size());
-		cars.remove(2);
-		System.out.println(cars);
-		System.out.println(cars.size());
-
+		
 	}
 
 }
