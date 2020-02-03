@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.*;
 
 public class Exercises {
 
@@ -6,8 +7,11 @@ public class Exercises {
 		if (a == null || a.isEmpty() || b == null || b.isEmpty()) {
 			return false;
 		}
-		
 		// write your code here
+
+		if(a.get(a.size() - 1) == b.get(b.size() - 1) || a.get(0) == b.get(0)){
+			return true;
+		}
 		
 		return false;	// default return value to ensure compilation
 	}
@@ -15,6 +19,8 @@ public class Exercises {
 	public ArrayList<String> endsMeet(ArrayList<String> values, int n) {
 		// write your code here
 		
+		
+
 		return null;	// default return value to ensure compilation
 	}
 	
@@ -65,4 +71,19 @@ public class Exercises {
 		
 		return -1;		// default return value to ensure compilation
 	}
+
+	public static void main(String[] args){ 
+		ArrayList<String> cars = new ArrayList<String>();
+		cars.add("Volvo");
+		cars.add("BMW");
+		cars.add("Ford");
+		cars.add("Mazda");
+		System.out.println(cars);
+		System.out.println(cars.size());
+		cars.remove(2);
+		System.out.println(cars);
+		System.out.println(cars.size());
+
+	}
+
 }
