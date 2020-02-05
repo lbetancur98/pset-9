@@ -94,18 +94,85 @@ public class Exercises {
 	
 	public ArrayList<String> middle(ArrayList<String> values) {
 		// write your code here
+
+		if(values == null || values.size() < 3 || values.size() % 2 == 0){
+			return new ArrayList<String>();
+		}
+
+		for(int i = 0; i < values.size(); i++){
+			if(values.get(i) == null){
+				return new ArrayList<String>();
+			}
+		}
+
+		ArrayList<String> result = new ArrayList<String>();
+		String middle = values.get(values.size() / 2);
+		String leftMiddle = values.get((values.size() / 2) -1);
+		String rightMiddle = values.get((values.size() / 2) +1);
+
+		result.add(leftMiddle);
+		result.add(middle);
+		result.add(rightMiddle);
+
+
 		
-		return null;	// default return value to ensure compilation
+		return result;	// default return value to ensure compilation
 	}
 
 	public boolean increasing(ArrayList<Integer> numbers) {
 		// write your code here
+
+		if(numbers == null || numbers.size() < 3){
+			return false;
+		}
+
+		for(int i = 0; i < numbers.size() -2; i++){
+			int one = numbers.get(i);
+			int two = numbers.get(i +1);
+			int three = numbers.get(i+2);
+			
+			if(one < two && two < three){
+				return true;
+			}
+		}
+
+
 		
 		return false;	// default return value to ensure compilation
 	}
 	
 	public boolean everywhere(ArrayList<Integer> numbers, int x) {
 		// write your code here
+		if(numbers == null || numbers.size() < 1){
+			return false;
+		}
+
+		boolean continuity = false;
+
+		for(int i = 0; i< numbers.size() -2; i++){
+			int first = numbers.get(i);
+			int second = numbers.get(i+1);
+			int third = numbers.get(i +2);
+
+			if(i == 0){
+				if(first == x){
+					continuity = true;
+				} 
+			} else if(i == numbers.size() -2){
+				if(third == x){
+					continuity = true;
+				}
+			} else if(second == x){
+				continuity = true;
+			} else if(second != x){
+				if(first == x || third == x){
+					continuity = true;
+				} else {
+					return false;
+				}
+			}
+		}
+
 		
 		return false;	// default return value to ensure compilation
 	}
