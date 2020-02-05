@@ -149,23 +149,26 @@ public class Exercises {
 
 		boolean continuity = false;
 
-		for(int i = 0; i< numbers.size() -2; i++){
-			int first = numbers.get(i);
-			int second = numbers.get(i+1);
-			int third = numbers.get(i +2);
+		for(int i = 0; i< numbers.size() ; i++){
+			
 
 			if(i == 0){
-				if(first == x){
+				if(numbers.get(i) == x){
 					continuity = true;
-				} 
-			} else if(i == numbers.size() -2){
-				if(third == x){
-					continuity = true;
+				} else if(numbers.get(1) != x){
+					return false;
 				}
-			} else if(second == x){
+			} else if(i == numbers.size() -1){
+				if(numbers.get(i) == x){
+					continuity = true;
+				} else if(numbers.get(numbers.size()-2)!= x){
+					return false;
+				}
+
+			} else if(numbers.get(i) == x){
 				continuity = true;
-			} else if(second != x){
-				if(first == x || third == x){
+			} else if(numbers.get(i) != x){
+				if(numbers.get(i-1) == x || numbers.get(i+1) == x){
 					continuity = true;
 				} else {
 					return false;
@@ -174,17 +177,52 @@ public class Exercises {
 		}
 
 		
-		return false;	// default return value to ensure compilation
+		return continuity;	// default return value to ensure compilation
 	}
 	
 	public boolean consecutive(ArrayList<Integer> numbers) {
 		// write your code here
+
+		if(numbers == null || numbers.size() < 3){
+			return false;
+		}
+
+		for(int i = 0; i < numbers.size() -2; i++){
+			int one = numbers.get(i);
+			int two = numbers.get(i +1);
+			int three = numbers.get(i+2);
+			
+			if(one % 2 == 0 && two % 2 == 0 && three % 2==0){
+				return true;
+			} else if (one % 2 == 1 && two % 2 == 1 && three % 2==1){
+				return true;
+			}
+		}
 		
 		return false;	// default return value to ensure compilation
 	}
 	
 	public boolean balance(ArrayList<Integer> numbers) {
 		// write your code here
+
+		if(numbers == null || numbers.size() < 3){
+			return false;
+		}
+
+		
+
+		for(int i = 0; i< numbers.size() ; i++){
+
+			int sumLeft;
+			int sumRight;
+
+			if(i == 0){
+				for(int i = 1;)
+			}
+			
+
+		}
+
 		
 		return false;	// default return value to ensure compilation
 	}
