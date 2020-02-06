@@ -245,7 +245,13 @@ public class Exercises {
 			return -1;
 		}
 
-		
+		for (int i = 0; i < values.size(); i++) {
+			if (values.get(i) == null) {
+				return -1;
+			}
+		}
+
+
 		
 		return -1;		// default return value to ensure compilation
 	}
