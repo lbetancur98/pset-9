@@ -211,7 +211,7 @@ public class Exercises {
 
 		
 
-		for(int i = 0; i< numbers.size() ; i++){
+		for(int i = 0; i< numbers.size()  ; i++){
 
 			ArrayList<Integer> firstHalf = new ArrayList<Integer>(numbers.subList(0, i));
 			ArrayList<Integer> secondHalf = new ArrayList<Integer>(numbers.subList(i, numbers.size()));
@@ -223,8 +223,8 @@ public class Exercises {
 			for (int j : firstHalf) {
 				sumOne += j;
 			}
-			for (int j : secondHalf) {
-				sumTwo += j;
+			for (int k : secondHalf) {
+				sumTwo += k;
 			}
 			if (sumOne == sumTwo) {
 				return true;
@@ -240,6 +240,12 @@ public class Exercises {
 	
 	public int clumps(ArrayList<String> values) {
 		// write your code here
+
+		if (values == null) {
+			return -1;
+		}
+
+		
 		
 		return -1;		// default return value to ensure compilation
 	}
