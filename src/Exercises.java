@@ -224,7 +224,10 @@ public class Exercises {
 				sumOne += j;
 			}
 			for (int j : secondHalf) {
-				secondSum += j;
+				sumTwo += j;
+			}
+			if (sumOne == sumTwo) {
+				return true;
 			}
 
 			
