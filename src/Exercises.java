@@ -256,6 +256,15 @@ public class Exercises {
 		String previous = "";
 		int clumps = 0;
 
+		for (int i = 0; i < values.size(); i++) {
+			if (previous.equals(values.get(i))) {
+				isSame = true;
+				if (prevSame != true) {
+					clumps++;
+				} 
+			} 
+		}
+
 
 		
 		return -1;		// default return value to ensure compilation
