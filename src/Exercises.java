@@ -215,6 +215,13 @@ public class Exercises {
 
 			ArrayList<Integer> firstHalf = new ArrayList<Integer>(numbers.subList(0, i));
 			ArrayList<Integer> secondHalf = new ArrayList<Integer>(numbers.subList(i, numbers.size()));
+
+
+			int sumOne = 0;
+			int sumTwo = 0;
+
+			
+
 			
 
 		}
