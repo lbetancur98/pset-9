@@ -223,6 +223,9 @@ public class Exercises {
 			for (int j : firstHalf) {
 				sumOne += j;
 			}
+			for (int j : secondHalf) {
+				secondSum += j;
+			}
 
 			
 
