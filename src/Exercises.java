@@ -251,6 +251,11 @@ public class Exercises {
 			}
 		}
 
+		boolean isSame = false;
+		boolean prevSame = false;
+		String previous = "";
+		int clumps = 0;
+
 
 		
 		return -1;		// default return value to ensure compilation
