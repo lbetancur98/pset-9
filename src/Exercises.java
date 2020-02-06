@@ -220,7 +220,9 @@ public class Exercises {
 			int sumOne = 0;
 			int sumTwo = 0;
 
-			
+			for (int j : firstHalf) {
+				sumOne += j;
+			}
 
 			
 
