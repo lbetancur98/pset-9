@@ -213,12 +213,8 @@ public class Exercises {
 
 		for(int i = 0; i< numbers.size() ; i++){
 
-			int sumLeft;
-			int sumRight;
-
-			if(i == 0){
-				for(int i = 1;)
-			}
+			ArrayList<Integer> firstHalf = new ArrayList<Integer>(numbers.subList(0, i));
+			ArrayList<Integer> secondHalf = new ArrayList<Integer>(numbers.subList(i, numbers.size()));
 			
 
 		}
