@@ -262,12 +262,16 @@ public class Exercises {
 				if (prevSame != true) {
 					clumps++;
 				} 
-			} 
+			} else {
+				isSame = false;
+			}
+			previous = values.get(i);
+			prevSame = isSame;
 		}
 
 
 		
-		return -1;		// default return value to ensure compilation
+		return clumps;		// default return value to ensure compilation
 	}
 
 	public static void main(String[] args){ 
