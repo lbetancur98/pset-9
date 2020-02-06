@@ -205,7 +205,7 @@ public class Exercises {
 	public boolean balance(ArrayList<Integer> numbers) {
 		// write your code here
 
-		if(numbers == null || numbers.size() < 3){
+		if(numbers == null || numbers.size() < 1){
 			return false;
 		}
 
